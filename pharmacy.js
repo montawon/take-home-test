@@ -39,7 +39,7 @@ export class Pharmacy {
   handleFervexCase(currentdrug) {
     const expirationDays = currentdrug.expiresIn
 
-    if (expirationDays > 0) {
+    if (expirationDays >= 0) {
       if (expirationDays <= 10 && expirationDays > 5) {
         return -2;
       } else if (expirationDays <= 5) {
@@ -64,7 +64,7 @@ export class Pharmacy {
         benefitEffect = -1 * benefitEffect;
         break;
       case "Fervex":
-        benefitEffect = this.handleFervexCase(currentDrug.expiresIn);
+        benefitEffect = this.handleFervexCase(currentDrug);
         break;
       default:
         benefitEffect = benefitEffect;
