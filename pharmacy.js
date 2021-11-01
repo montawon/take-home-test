@@ -86,7 +86,6 @@ export class Pharmacy {
       // Note: Magic pill does not change over time, it's a very specific case
       if (this.drugs[i].name === "Magic Pill") {
         this.handlingBenefitCap(this.drugs[i]);
-        return this.drugs;
       } else {
         this.updateExpiration(this.drugs[i]);
         this.updateDrugEfficiency(this.drugs[i]);
