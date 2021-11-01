@@ -54,7 +54,7 @@ export class Pharmacy {
   }
 
   updateDrugEfficiency(currentDrug) {
-    let benefitEffect = currentDrug.expiresIn > 0 ? 1 : 2;
+    let benefitEffect = currentDrug.expiresIn >= 0 ? 1 : 2;
 
     switch (currentDrug.name) {
       case "Dafalgan":
